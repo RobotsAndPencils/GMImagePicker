@@ -126,6 +126,7 @@ NSString * const GMGridViewCellIdentifier = @"GMGridViewCellIdentifier";
     }
     
     self.imageManager = [[PHCachingImageManager alloc] init];
+#warning: AM - there is a crash here if permissions to the photo library are denied
     [self resetCachedAssets];
     [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
     
